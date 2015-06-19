@@ -14,7 +14,7 @@ The plan
 1. Build all of the controllers listed in the MetaRoR routes file
 2. Make editing files nicer (use a real text editer, add new, create, and destroy actions, etc..)
 3. Build a graphical editing environment for each file type (model, view, controller, script, stylesheet, routes)
-4. Make it user friendly.. I suspect that there are things I want people to be able to do with models that will be logistically complex.. we'll want to bounce things off of some actual non-programmers at this stage.. in principal people who never read http://qntm.org/gay will find themselves in need of migrations (and in need of reading http://qntm.org/gay)
+4. Make it user friendly.. I suspect that there are things I want people to be able to do with models that will be logistically complex.. we'll want to bounce things off of some actual non-programmers at this stage.. and we'll need a way to make schemata changes and, in principal people who never read http://qntm.org/gay will find themselves in need of migrations (or something better than migrations..) (and in need of reading http://qntm.org/gay)
 5. Start adding common gems like devise
 
 Steps #1 and #2 should be easy. I hope to enlist help for step #3 (not sure yet how I'll go about that).
