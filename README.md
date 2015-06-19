@@ -1,7 +1,7 @@
 MetaRoR
 ====
 
-MetaRoR is like (RoR)[https://github.com/rails/rails] except instead of using (ActiveRecord)[https://en.wikipedia.org/wiki/Active_record_pattern] to interact with a database it uses (Pathname)[http://ruby-doc.org/stdlib-2.1.5/libdoc/pathname/rdoc/Pathname.html] interact with a ProtoRoR. What is a ProtoRoR you ask, why it's the opposite of a MetaRoR! Confused? ProtoRoRs and MetaRoRs are both RoR installations except that one is nested inside the other!
+MetaRoR is like [RoR](https://github.com/rails/rails) except instead of using [ActiveRecord](https://en.wikipedia.org/wiki/Active_record_pattern) to interact with a database it uses [Pathname](http://ruby-doc.org/stdlib-2.1.5/libdoc/pathname/rdoc/Pathname.html) interact with a ProtoRoR. What is a ProtoRoR you ask, why it's the opposite of a MetaRoR! Confused? ProtoRoRs and MetaRoRs are both RoR installations except that one is nested inside the other!
 
 What can I do with a MetaRoR
 ====
