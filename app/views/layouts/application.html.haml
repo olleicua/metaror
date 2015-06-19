@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title Metaror
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  %body
+    .header
+      %ul.nav
+        %li= link_to 'Models', models_path
+        %li= link_to 'Controllers', controllers_path
+
+    .content
+      = yield

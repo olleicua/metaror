@@ -1,0 +1,5 @@
+%h2= @section.pluralize
+
+%ul
+  - @files.each do |file|
+    %li= link_to file.id.titleize, edit_file_path(file)
