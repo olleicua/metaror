@@ -10,7 +10,11 @@
     .header
       %ul.nav
         %li= link_to 'Models', models_path
+        %li= link_to 'Views', views_path
         %li= link_to 'Controllers', controllers_path
+        %li= link_to 'Scripts', javascripts_path
+        %li= link_to 'Stylesheets', stylesheets_path
+        %li= link_to 'Routes', edit_route_path(RouteFile.file.id)
 
     .content
       = yield

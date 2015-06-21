@@ -8,7 +8,8 @@ class ProtoFile
     elsif options[:path]
       @path = Pathname.new options[:path]
     elsif options[:id]
-      @path = directory.join("#{options[:id]}#{path_suffix}")
+      id = options[:id].downcase.underscore
+      @path = directory.join("#{id}#{path_suffix}")
     else
         raise ArgumentError,
               'ProtoFile cannot be specified without a path or an id'
@@ -16,7 +17,7 @@ class ProtoFile
   end
 
   def self.all
-    directory.entries.map do |name|
+    directory.find.map do |name|
       path = directory.join(name)
       if path.file? and path.fnmatch?("*#{path_suffix}")
         new(path: path)
@@ -50,19 +51,23 @@ class ProtoFile
   end
 
   def name
-    @path.relative_path_from(self.class.directory).to_path
+    path.relative_path_from(self.class.directory).to_path
   end
 
   def id
-    path.basename.to_path.sub /#{self.class.path_suffix}$/, ''
+    name.sub /#{path_suffix}$/, ''
   end
 
   def persisted?
-    @path.file?
+    path.file?
   end
 
   def contents
-    @contents ||= @path.read
+    if persisted?
+      @contents ||= path.read
+    else
+      ''
+    end
   end
 
   def contents=(string)
@@ -77,6 +82,9 @@ class ProtoFile
   end
 
   def save
+    if !persisted?
+      path.dirname.mkdir
+    end
     path.write(contents)
   end
 end

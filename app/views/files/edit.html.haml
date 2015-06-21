@@ -2,4 +2,6 @@
   = @file.id.titleize
   = @section
 
-= render 'form'
+= form_tag file_path(@file), method: 'put' do
+  .content-field= text_area :file, :contents, cols: 80, rows: 30
+  = submit_tag 'Save'

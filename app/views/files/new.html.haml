@@ -1,0 +1,6 @@
+%h2
+  New #{@section}
+
+= form_tag files_path, method: 'post' do
+  .id-field= text_field_tag 'file[id]', params['file[id]']
+  = submit_tag 'Create'
