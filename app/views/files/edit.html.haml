@@ -3,5 +3,7 @@
   = @section
 
 = form_tag file_path(@file), method: 'put' do
-  .content-field= text_area :file, :contents, cols: 80, rows: 30
+  .content-field
+    = text_area :file, :contents, cols: 80, rows: 30, class: 'code'
+    #ace-edit{data: {ext: @file.path.extname}}
   = submit_tag 'Save'

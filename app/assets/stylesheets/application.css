@@ -18,3 +18,10 @@ a {
   text-align: center;
   font-size: 28px;
 }
+
+#ace-edit {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  border: 2px solid #fff;
+}
